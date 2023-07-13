@@ -21,3 +21,4 @@ being blocked, instead we won't make this call, and directly invoke the syscall 
 <p>By opening up ntdll.dll in IDA we can see the dissasembled native functions.  This is what is needed to make calls to them via the function declarations. This is different from 
 using GetProcAddress to retrieve the virtual address of the function, as that is still using the api, instead we are skipping this and just doing what the api is doing under the hood,
 and making the syscall directly, using the specified syscall number. All syscodes in windows use the same setup, the value in eax will be the desired syscall you want to make.</p>
+<img src="https://github.com/Clydeston/windows-syscalls/blob/main/ntwritevirtualmem%20example.PNG"/>
